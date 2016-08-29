@@ -1,6 +1,6 @@
 int x = -150;
 int y = -150;
-int size = 500;
+int faceSize = 500;
 void setup() {
 	size(1000,1000);
 }
@@ -10,15 +10,13 @@ void draw() {
 	if(x>1150 && y>1150) {
 		x = -150;
 		y = -150;
-		size = 500;
+		faceSize = 500;
 	} else {
 		y+=10;
 		x+=10;
-		size-=5;
+		faceSize-=5;
 	}
-
-	
-	drawFace(x, y, size);
+	drawFace(x, y, faceSize);
 }
 void drawFace(int x, int y, int s) {
 	fill(255, 255, 0);
